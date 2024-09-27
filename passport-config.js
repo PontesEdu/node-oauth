@@ -13,7 +13,7 @@ passport.deserializeUser(function (obj, done) {
 passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_CLIENTE_ID,
   clientSecret: process.env.GITHUB_CLIENTE_SECRETE,
-  callbackURL: "http://localhost:3000/auth/github/callback"
+  callbackURL: "https://node-oauth.vercel.app/auth/github/callback"
 },
 function(accessToken, refreshToken, profile, done) {
   // User.findOrCreate({ githubId: profile.id }, function (err, user) {
